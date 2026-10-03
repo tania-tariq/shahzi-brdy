@@ -1,0 +1,3012 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy 21st Birthday 💗</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    overflow-x:hidden;
+    color:white;
+
+    background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.55),transparent 18%),
+    radial-gradient(circle at 85% 15%,rgba(255,255,255,.35),transparent 20%),
+    radial-gradient(circle at 50% 80%,rgba(255,105,170,.45),transparent 35%),
+    linear-gradient(135deg,#ffb7d5,#f98db9,#e978aa,#ffb6d5);
+
+    min-height:100vh;
+}
+
+
+/* =====================================================
+   GLOWING BACKGROUND
+===================================================== */
+
+body::before{
+    content:"";
+    position:fixed;
+    width:500px;
+    height:500px;
+    border-radius:50%;
+    background:rgba(255,255,255,.15);
+    filter:blur(80px);
+    top:-180px;
+    left:-150px;
+    animation:glowMove 8s ease-in-out infinite alternate;
+    pointer-events:none;
+}
+
+body::after{
+    content:"";
+    position:fixed;
+    width:450px;
+    height:450px;
+    border-radius:50%;
+    background:rgba(255,50,130,.18);
+    filter:blur(80px);
+    bottom:-180px;
+    right:-150px;
+    animation:glowMove2 10s ease-in-out infinite alternate;
+    pointer-events:none;
+}
+
+@keyframes glowMove{
+    to{
+        transform:translate(180px,100px);
+    }
+}
+
+@keyframes glowMove2{
+    to{
+        transform:translate(-150px,-100px);
+    }
+}
+
+
+/* =====================================================
+   FLOATING PARTICLES
+===================================================== */
+
+.particle{
+    position:fixed;
+    pointer-events:none;
+    z-index:1;
+    opacity:.6;
+    animation:particleFloat linear infinite;
+}
+
+@keyframes particleFloat{
+
+    0%{
+        transform:translateY(110vh) rotate(0);
+        opacity:0;
+    }
+
+    15%{
+        opacity:.7;
+    }
+
+    100%{
+        transform:translateY(-120vh) rotate(360deg);
+        opacity:0;
+    }
+
+}
+
+
+/* =====================================================
+   SECTIONS
+===================================================== */
+
+section{
+    min-height:100vh;
+    padding:70px 18px;
+
+    display:none;
+
+    position:relative;
+    z-index:5;
+}
+
+section.active{
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    animation:pageIn 1s cubic-bezier(.17,.67,.3,1.2);
+}
+
+@keyframes pageIn{
+
+    0%{
+        opacity:0;
+        transform:scale(.94) translateY(35px);
+    }
+
+    100%{
+        opacity:1;
+        transform:scale(1) translateY(0);
+    }
+
+}
+
+
+h1{
+    font-family:'Pacifico',cursive;
+
+    font-size:clamp(45px,9vw,85px);
+
+    text-align:center;
+
+    text-shadow:
+        0 5px 25px rgba(130,0,60,.3),
+        0 0 25px rgba(255,255,255,.25);
+}
+
+
+h2{
+    font-family:'Pacifico',cursive;
+
+    font-size:clamp(32px,6vw,55px);
+
+    text-align:center;
+
+    margin-bottom:12px;
+
+    text-shadow:
+        0 5px 20px rgba(120,0,60,.25);
+}
+
+
+.subtitle{
+    text-align:center;
+
+    font-size:16px;
+
+    max-width:650px;
+
+    line-height:1.8;
+
+    margin-bottom:25px;
+}
+
+
+/* =====================================================
+   BUTTON
+===================================================== */
+
+.next-btn{
+
+    border:none;
+    outline:none;
+
+    padding:15px 30px;
+
+    border-radius:100px;
+
+    background:rgba(255,255,255,.95);
+
+    color:#e44f8c;
+
+    font-family:'Poppins',sans-serif;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    box-shadow:
+        0 10px 30px rgba(100,0,50,.2),
+        0 0 25px rgba(255,255,255,.2);
+
+    transition:.35s;
+}
+
+.next-btn:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.05);
+
+    box-shadow:
+        0 15px 35px rgba(100,0,50,.3),
+        0 0 30px rgba(255,255,255,.5);
+}
+
+.next-btn:active{
+    transform:scale(.95);
+}
+
+
+/* =====================================================
+   21 BADGE
+===================================================== */
+
+.age-badge{
+
+    margin:20px 0;
+
+    width:125px;
+    height:125px;
+
+    border-radius:50%;
+
+    display:flex;
+    flex-direction:column;
+
+    align-items:center;
+    justify-content:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,.9),
+            rgba(255,205,225,.8)
+        );
+
+    color:#e44f8c;
+
+    box-shadow:
+        0 0 0 8px rgba(255,255,255,.12),
+        0 0 35px rgba(255,255,255,.55),
+        0 15px 35px rgba(100,0,50,.2);
+
+    animation:
+        agePulse 2s infinite ease-in-out;
+}
+
+.age-number{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:48px;
+
+    line-height:1;
+}
+
+.age-small{
+
+    font-size:13px;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+}
+
+@keyframes agePulse{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+}
+
+
+/* =====================================================
+   CALENDAR
+===================================================== */
+
+.calendar{
+
+    width:min(510px,94vw);
+
+    padding:28px;
+
+    background:rgba(255,255,255,.20);
+
+    border:1px solid rgba(255,255,255,.4);
+
+    backdrop-filter:blur(18px);
+
+    -webkit-backdrop-filter:blur(18px);
+
+    border-radius:35px;
+
+    box-shadow:
+        0 25px 70px rgba(100,0,50,.25),
+        inset 0 0 30px rgba(255,255,255,.1);
+}
+
+.month{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:45px;
+
+    text-align:center;
+
+    margin-bottom:22px;
+}
+
+.weekdays,
+.days{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(7,1fr);
+
+    gap:8px;
+}
+
+.weekdays div{
+
+    text-align:center;
+
+    font-size:12px;
+
+    opacity:.8;
+}
+
+.days div{
+
+    aspect-ratio:1;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    border-radius:50%;
+
+    font-weight:500;
+
+    position:relative;
+}
+
+.special-date{
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff4f91,
+            #ff79ac
+        );
+
+    box-shadow:
+        0 0 0 5px rgba(255,255,255,.15),
+        0 0 30px #ff4f91;
+
+    animation:
+        heartbeat 1.4s infinite;
+}
+
+.special-date::after{
+
+    content:"💗";
+
+    position:absolute;
+
+    top:-22px;
+
+    font-size:22px;
+}
+
+@keyframes heartbeat{
+
+    0%,100%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.18);
+    }
+
+}
+
+.four-word{
+
+    margin:25px 0;
+
+    font-family:'Pacifico',cursive;
+
+    font-size:25px;
+
+    text-align:center;
+}
+
+
+/* =====================================================
+   BALLOONS
+===================================================== */
+
+.balloon-area{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-end;
+
+    flex-wrap:wrap;
+
+    gap:25px;
+
+    max-width:700px;
+
+    margin:25px auto 10px;
+}
+
+.balloon-holder{
+
+    position:relative;
+
+    animation:
+        balloonSway 2s ease-in-out infinite;
+}
+
+.balloon-holder:nth-child(2){
+    animation-delay:.3s;
+}
+
+.balloon-holder:nth-child(3){
+    animation-delay:.6s;
+}
+
+.balloon-holder:nth-child(4){
+    animation-delay:.9s;
+}
+
+.balloon-holder:nth-child(5){
+    animation-delay:1.2s;
+}
+
+.balloon{
+
+    width:78px;
+    height:98px;
+
+    border-radius:
+        52% 48% 48% 52%;
+
+    cursor:pointer;
+
+    position:relative;
+
+    background:
+        radial-gradient(
+            circle at 30% 25%,
+            rgba(255,255,255,.7),
+            transparent 12%
+        ),
+        linear-gradient(
+            135deg,
+            #ffb4d2,
+            #ff4d91
+        );
+
+    box-shadow:
+        inset -12px -12px 20px rgba(170,0,70,.12),
+        0 10px 25px rgba(110,0,50,.2);
+
+    transition:.2s;
+}
+
+.balloon:hover{
+    transform:scale(1.08);
+}
+
+.balloon::before{
+
+    content:"";
+
+    position:absolute;
+
+    bottom:-9px;
+
+    left:32px;
+
+    border-left:
+        7px solid transparent;
+
+    border-right:
+        7px solid transparent;
+
+    border-top:
+        12px solid #ff4d91;
+}
+
+.balloon::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:2px;
+
+    height:70px;
+
+    background:
+        rgba(255,255,255,.8);
+
+    left:50%;
+
+    top:97px;
+}
+
+.balloon-popped{
+
+    animation:
+        balloonPop .4s forwards !important;
+}
+
+@keyframes balloonSway{
+
+    50%{
+        transform:
+            translateY(-14px)
+            rotate(3deg);
+    }
+
+}
+
+@keyframes balloonPop{
+
+    0%{
+        transform:scale(1);
+    }
+
+    40%{
+        transform:scale(1.35);
+    }
+
+    100%{
+        transform:
+            scale(2.2);
+
+        opacity:0;
+    }
+
+}
+
+.pop-message{
+
+    min-height:55px;
+
+    margin:30px 0 15px;
+
+    font-family:'Pacifico',cursive;
+
+    font-size:32px;
+
+    text-align:center;
+
+    text-shadow:
+        0 5px 20px rgba(100,0,50,.3);
+}
+
+
+/* =====================================================
+   CAKE
+===================================================== */
+
+.cake-area{
+
+    position:relative;
+
+    width:330px;
+
+    height:310px;
+
+    margin:20px auto;
+}
+
+.plate{
+
+    position:absolute;
+
+    width:320px;
+
+    height:25px;
+
+    bottom:25px;
+
+    left:5px;
+
+    background:
+        linear-gradient(
+            #fff,
+            #ffe2ee
+        );
+
+    border-radius:50%;
+
+    box-shadow:
+        0 8px 20px rgba(90,0,40,.25);
+}
+
+.cake-layer{
+
+    position:absolute;
+
+    border-radius:
+        18px 18px 13px 13px;
+
+    background:
+        linear-gradient(
+            #ffc9df,
+            #ff7eae
+        );
+
+    box-shadow:
+        inset 0 -12px 15px rgba(180,0,70,.1),
+        0 8px 15px rgba(90,0,40,.12);
+}
+
+.layer-bottom{
+
+    width:250px;
+    height:75px;
+
+    left:40px;
+    bottom:45px;
+}
+
+.layer-middle{
+
+    width:215px;
+    height:70px;
+
+    left:58px;
+    bottom:105px;
+}
+
+.layer-top{
+
+    width:175px;
+    height:65px;
+
+    left:77px;
+    bottom:160px;
+}
+
+.frosting{
+
+    position:absolute;
+
+    top:-9px;
+    left:0;
+
+    width:100%;
+    height:23px;
+
+    background:#fff;
+
+    border-radius:50%;
+}
+
+.drip{
+
+    position:absolute;
+
+    width:20px;
+    height:30px;
+
+    background:white;
+
+    border-radius:
+        0 0 15px 15px;
+
+    top:4px;
+}
+
+.drip:nth-child(2){
+    left:25%;
+}
+
+.drip:nth-child(3){
+
+    left:50%;
+
+    height:40px;
+}
+
+.drip:nth-child(4){
+    left:72%;
+}
+
+.candle{
+
+    position:absolute;
+
+    width:17px;
+    height:60px;
+
+    bottom:220px;
+
+    border-radius:5px;
+
+    background:
+        repeating-linear-gradient(
+            45deg,
+            #ffb1ce 0px,
+            #ffb1ce 8px,
+            #fff 8px,
+            #fff 13px
+        );
+}
+
+.candle.one{
+    left:112px;
+}
+
+.candle.two{
+    left:156px;
+}
+
+.candle.three{
+    left:200px;
+}
+
+.flame{
+
+    position:absolute;
+
+    width:22px;
+    height:32px;
+
+    top:-30px;
+    left:-3px;
+
+    background:#fff0a8;
+
+    border-radius:
+        50% 50% 50% 0;
+
+    transform:rotate(-45deg);
+
+    box-shadow:
+        0 0 10px #fff,
+        0 0 25px #ffd45c,
+        0 0 40px #ffb300;
+
+    animation:
+        flameFlicker .7s infinite alternate;
+}
+
+@keyframes flameFlicker{
+
+    0%{
+        transform:
+            rotate(-45deg)
+            scale(1);
+    }
+
+    100%{
+        transform:
+            rotate(-42deg)
+            scale(1.18);
+    }
+
+}
+
+.age-text{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:34px;
+
+    text-align:center;
+
+    margin-top:-5px;
+
+    animation:
+        ageGlow 1.8s infinite alternate;
+}
+
+@keyframes ageGlow{
+
+    from{
+
+        transform:scale(1);
+
+        text-shadow:
+            0 0 10px
+            rgba(255,255,255,.4);
+    }
+
+    to{
+
+        transform:scale(1.08);
+
+        text-shadow:
+            0 0 30px
+            rgba(255,255,255,.95);
+    }
+
+}
+
+.cake-sparkles{
+
+    font-size:32px;
+
+    text-align:center;
+
+    margin-top:8px;
+}
+
+
+/* =====================================================
+   TYPING MESSAGE
+===================================================== */
+
+.message-card{
+
+    width:min(850px,95vw);
+
+    min-height:350px;
+
+    padding:40px;
+
+    border-radius:35px;
+
+    background:
+        rgba(255,255,255,.18);
+
+    border:
+        1px solid
+        rgba(255,255,255,.3);
+
+    backdrop-filter:blur(18px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(100,0,50,.25);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+}
+
+#typingText{
+
+    font-size:19px;
+
+    line-height:2.05;
+
+    white-space:pre-line;
+
+    text-align:center;
+}
+
+.cursor{
+
+    display:inline-block;
+
+    width:3px;
+
+    height:20px;
+
+    background:white;
+
+    animation:blink .7s infinite;
+}
+
+@keyframes blink{
+
+    50%{
+        opacity:0;
+    }
+
+}
+
+
+/* =====================================================
+   MEMORIES
+===================================================== */
+
+.memory-grid{
+
+    width:min(1100px,96vw);
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(
+            auto-fit,
+            minmax(220px,1fr)
+        );
+
+    gap:25px;
+
+    margin:25px 0;
+}
+
+.memory{
+
+    overflow:hidden;
+
+    border-radius:28px;
+
+    background:
+        rgba(255,255,255,.18);
+
+    border:
+        1px solid
+        rgba(255,255,255,.25);
+
+    backdrop-filter:blur(12px);
+
+    box-shadow:
+        0 15px 40px
+        rgba(90,0,40,.2);
+
+    transition:.5s;
+
+    opacity:0;
+
+    transform:translateY(30px);
+}
+
+.memory.show{
+
+    opacity:1;
+
+    transform:
+        translateY(0);
+}
+
+.memory:hover{
+
+    transform:
+        translateY(-10px)
+        scale(1.02);
+}
+
+.memory-image{
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.memory img{
+
+    display:block;
+
+    width:100%;
+
+    height:270px;
+
+    object-fit:contain;
+
+    object-position:center;
+
+    background:rgba(255,255,255,.06);
+
+    transition:.6s;
+}
+
+.memory:hover img{
+
+    transform:
+        scale(1.08);
+}
+
+.caption{
+
+    padding:20px;
+
+    font-size:15px;
+
+    line-height:1.8;
+
+    color:#fff9fd;
+}
+
+.funny-card{
+
+    width:min(700px,92vw);
+
+    margin:28px auto 12px;
+
+    padding:22px 20px;
+
+    border-radius:24px;
+
+    background:
+        linear-gradient(135deg,rgba(255,255,255,.2),rgba(255,214,233,.18));
+
+    border:
+        1px solid
+        rgba(255,255,255,.28);
+
+    box-shadow:
+        0 18px 45px
+        rgba(110,0,55,.18);
+
+    text-align:center;
+
+    font-size:18px;
+
+    line-height:1.9;
+
+    color:#fffefc;
+
+    animation:
+        sillyFloat 2.4s ease-in-out infinite;
+}
+
+.funny-badge{
+
+    display:inline-block;
+
+    margin-bottom:10px;
+
+    padding:7px 14px;
+
+    border-radius:999px;
+
+    background:rgba(255,255,255,.15);
+
+    font-size:12px;
+
+    letter-spacing:1px;
+
+    text-transform:uppercase;
+    font-weight:700;
+
+    color:#ffe7f3;
+}
+
+@keyframes sillyFloat{
+
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-8px) rotate(0.8deg);
+    }
+
+}
+
+
+/* =====================================================
+   LOVE QUESTION
+===================================================== */
+
+.love-card{
+
+    width:min(650px,95vw);
+
+    padding:55px 25px;
+
+    text-align:center;
+
+    border-radius:40px;
+
+    background:
+        rgba(255,255,255,.2);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 25px 70px
+        rgba(90,0,40,.3);
+}
+
+.love-heart{
+
+    font-size:75px;
+
+    animation:
+        heartBeat 1.4s infinite;
+}
+
+@keyframes heartBeat{
+
+    50%{
+        transform:scale(1.18);
+    }
+
+}
+
+.love-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    gap:25px;
+
+    margin-top:35px;
+
+    min-height:80px;
+}
+
+.yes-btn,
+.no-btn{
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:100px;
+
+    font-family:'Poppins';
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.25s;
+}
+
+.yes-btn{
+
+    background:white;
+
+    color:#e24c88;
+
+    box-shadow:
+        0 10px 25px
+        rgba(90,0,40,.2);
+}
+
+.yes-btn:hover{
+
+    transform:
+        scale(1.1);
+}
+
+.no-btn{
+
+    background:#ff4d8d;
+
+    color:white;
+
+    box-shadow:
+        0 10px 25px
+        rgba(90,0,40,.2);
+
+    position:relative;
+}
+
+#noMessage{
+
+    min-height:35px;
+
+    margin-top:20px;
+
+    font-size:16px;
+
+    font-weight:600;
+}
+
+
+/* =====================================================
+   REASONS
+===================================================== */
+
+.reason-card{
+
+    width:min(720px,95vw);
+
+    min-height:300px;
+
+    padding:45px 30px;
+
+    border-radius:40px;
+
+    background:
+        rgba(255,255,255,.2);
+
+    backdrop-filter:blur(20px);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    box-shadow:
+        0 25px 70px
+        rgba(90,0,40,.3);
+
+    text-align:center;
+}
+
+.reason{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:28px;
+
+    line-height:1.7;
+
+    animation:
+        reasonAppear .8s ease;
+}
+
+@keyframes reasonAppear{
+
+    from{
+
+        opacity:0;
+
+        transform:
+            scale(.65)
+            rotate(-3deg);
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+            scale(1)
+            rotate(0);
+    }
+
+}
+
+
+/* =====================================================
+   FINAL
+===================================================== */
+
+.final-card{
+
+    width:min(800px,95vw);
+
+    padding:35px;
+
+    border-radius:40px;
+
+    background:
+        rgba(255,255,255,.18);
+
+    backdrop-filter:blur(20px);
+
+    box-shadow:
+        0 25px 80px
+        rgba(90,0,40,.3);
+
+    text-align:center;
+}
+
+.final-age{
+
+    font-family:'Pacifico',cursive;
+
+    font-size:35px;
+
+    margin:15px 0;
+
+    animation:
+        ageGlow 1.8s infinite alternate;
+}
+
+.final-image{
+
+    width:min(300px,78%);
+
+    max-height:360px;
+
+    object-fit:cover;
+
+    border-radius:24px;
+
+    margin:25px auto;
+
+    display:block;
+
+    box-shadow:
+        0 15px 45px
+        rgba(80,0,40,.3);
+
+    animation:
+        finalFloat 3s
+        ease-in-out infinite;
+}
+
+@keyframes finalFloat{
+
+    50%{
+
+        transform:
+            translateY(-12px)
+            rotate(1deg);
+    }
+
+}
+
+.final-message{
+
+    font-size:18px;
+
+    line-height:2;
+
+    margin-top:20px;
+}
+
+.final-wishes{
+
+    margin-top:25px;
+
+    font-family:'Pacifico',cursive;
+
+    font-size:25px;
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+.confetti{
+
+    position:fixed;
+
+    top:-30px;
+
+    z-index:9999;
+
+    pointer-events:none;
+
+    animation:
+        confettiFall
+        linear
+        forwards;
+}
+
+@keyframes confettiFall{
+
+    to{
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+
+        opacity:0;
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media(max-width:600px){
+
+    section{
+        padding:50px 12px;
+    }
+
+    .calendar{
+        padding:20px;
+    }
+
+    .month{
+        font-size:36px;
+    }
+
+    .balloon{
+        width:62px;
+        height:82px;
+    }
+
+    .cake-area{
+
+        transform:scale(.8);
+
+        margin:-5px;
+    }
+
+    .message-card{
+        padding:25px 18px;
+    }
+
+    #typingText{
+        font-size:16px;
+    }
+
+    .memory-grid{
+        grid-template-columns:1fr;
+    }
+
+    .memory img{
+        height:320px;
+        object-fit:contain;
+        object-position:center;
+    }
+
+    .reason{
+        font-size:22px;
+    }
+
+    .love-buttons{
+        gap:12px;
+    }
+
+    .yes-btn,
+    .no-btn{
+        padding:12px 23px;
+    }
+
+    .age-badge{
+
+        width:105px;
+        height:105px;
+    }
+
+    .age-number{
+        font-size:40px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =====================================================
+     FLOATING BACKGROUND
+===================================================== -->
+
+<script>
+
+const particleEmojis=[
+    "💗",
+    "💕",
+    "💖",
+    "✨",
+    "🌸",
+    "🎀",
+    "♡",
+    "✦"
+];
+
+for(let i=0;i<35;i++){
+
+    const p=document.createElement("div");
+
+    p.className="particle";
+
+    p.innerHTML=
+        particleEmojis[
+            Math.floor(
+                Math.random()*particleEmojis.length
+            )
+        ];
+
+    p.style.left=
+        Math.random()*100+"vw";
+
+    p.style.fontSize=
+        (10+Math.random()*20)+"px";
+
+    p.style.animationDuration=
+        (7+Math.random()*9)+"s";
+
+    p.style.animationDelay=
+        Math.random()*8+"s";
+
+    document.body.appendChild(p);
+}
+
+</script>
+
+
+<!-- =====================================================
+     STEP 1 — OCTOBER + 21
+===================================================== -->
+
+<section id="step1" class="active">
+
+    <h1>October 💗</h1>
+
+    <p class="subtitle">
+
+        A very special month
+        for a very special person... 🎀
+
+    </p>
+
+
+    <!-- 21 BADGE -->
+
+    <div class="age-badge">
+
+        <div class="age-number">
+            21
+        </div>
+
+        <div class="age-small">
+            YEARS
+        </div>
+
+    </div>
+
+
+    <div class="calendar">
+
+        <div class="month">
+            October 🎀
+        </div>
+
+
+        <div class="weekdays">
+
+            <div>Sun</div>
+            <div>Mon</div>
+            <div>Tue</div>
+            <div>Wed</div>
+            <div>Thu</div>
+            <div>Fri</div>
+            <div>Sat</div>
+
+        </div>
+
+
+        <div class="days">
+
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+
+            <div>4</div>
+
+            <div class="special-date">
+                5
+            </div>
+
+            <div>6</div>
+            <div>7</div>
+            <div>8</div>
+            <div>9</div>
+            <div>10</div>
+
+            <div>11</div>
+            <div>12</div>
+            <div>13</div>
+            <div>14</div>
+            <div>15</div>
+            <div>16</div>
+            <div>17</div>
+
+            <div>18</div>
+            <div>19</div>
+            <div>20</div>
+            <div>21</div>
+            <div>22</div>
+            <div>23</div>
+            <div>24</div>
+
+            <div>25</div>
+            <div>26</div>
+            <div>27</div>
+            <div>28</div>
+            <div>29</div>
+            <div>30</div>
+            <div>31</div>
+
+        </div>
+
+    </div>
+
+
+    <div class="four-word">
+
+        You Make Life Beautiful 💗
+
+    </div>
+
+
+    <button
+        class="next-btn"
+        onclick="nextStep(2)">
+
+        Open Your Surprise 🎁
+
+    </button>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 2 — BALLOONS
+===================================================== -->
+
+<section id="step2">
+
+    <h2>
+        Pop The Balloons 🎈
+    </h2>
+
+    <p class="subtitle">
+        Each balloon holds a little surprise
+        <br>
+        Pop them all! 🥹💗
+
+    </p>
+
+
+    <div class="balloon-area">
+
+        <div class="balloon-holder">
+
+            <div
+                class="balloon"
+                onclick="popBalloon(this,0)">
+            </div>
+
+        </div>
+
+
+        <div class="balloon-holder">
+
+            <div
+                class="balloon"
+                onclick="popBalloon(this,1)">
+            </div>
+
+        </div>
+
+
+        <div class="balloon-holder">
+
+            <div
+                class="balloon"
+                onclick="popBalloon(this,2)">
+            </div>
+
+        </div>
+
+
+        <div class="balloon-holder">
+
+            <div
+                class="balloon"
+                onclick="popBalloon(this,3)">
+            </div>
+
+        </div>
+
+
+        <div class="balloon-holder">
+
+            <div
+                class="balloon"
+                onclick="popBalloon(this,4)">
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <div
+        id="popMessage"
+        class="pop-message">
+
+        🎈 🎈 🎈
+
+    </div>
+
+
+    <button
+        id="balloonNext"
+        class="next-btn"
+        onclick="nextStep(3)"
+        style="display:none;">
+
+        Now For The Cake 🎂
+
+    </button>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 3 — CAKE + 21
+===================================================== -->
+
+<section id="step3">
+
+    <h2>
+        A Cake For You 🎂
+    </h2>
+
+    <p class="subtitle">
+
+        Make a wish and blow the candles out...
+        one big wish. ✨
+
+    </p>
+
+
+    <div class="cake-area">
+
+        <div class="plate"></div>
+
+
+        <div class="cake-layer layer-bottom">
+
+            <div class="frosting">
+
+                <div class="drip"></div>
+                <div class="drip"></div>
+                <div class="drip"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="cake-layer layer-middle">
+
+            <div class="frosting">
+
+                <div class="drip"></div>
+                <div class="drip"></div>
+                <div class="drip"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="cake-layer layer-top">
+
+            <div class="frosting">
+
+                <div class="drip"></div>
+                <div class="drip"></div>
+                <div class="drip"></div>
+
+            </div>
+
+        </div>
+
+
+        <div class="candle one">
+
+            <div class="flame"></div>
+
+        </div>
+
+
+        <div class="candle two">
+
+            <div class="flame"></div>
+
+        </div>
+
+
+        <div class="candle three">
+
+            <div class="flame"></div>
+
+        </div>
+
+    </div>
+
+
+    <div class="age-text">
+
+        Cheers To 21! 🥂💗
+
+    </div>
+
+
+    <div class="cake-sparkles">
+
+        🎂 ✨ 2️⃣1️⃣ ✨ 🎈 💗
+
+    </div>
+
+
+    <button
+        class="next-btn"
+        onclick="startTyping()">
+
+        There's Something I Want To Say 💌
+
+    </button>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 4 — TYPING MESSAGE
+===================================================== -->
+
+<section id="step4">
+
+    <h2>
+        A Little Message For You 💌
+    </h2>
+
+
+    <div class="message-card">
+
+        <div id="typingText"></div>
+
+    </div>
+
+
+    <button
+        id="typingNext"
+        class="next-btn"
+        onclick="nextStep(5)"
+        style="display:none;margin-top:25px;">
+
+        Your Beautiful Memories 📸
+
+    </button>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 5 — MEMORIES
+===================================================== -->
+
+<section id="step5">
+
+    <h2>
+        Beautiful Memories 📸
+    </h2>
+
+    <p class="subtitle">
+
+        countless feelings. 💗
+
+    </p>
+
+
+    <div class="memory-grid">
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi1.jpeg" alt="Memory 1">
+
+            </div>
+
+            <div class="caption">
+
+                This is one of those moments
+                that makes my heart stop for a second...
+                because your smile is just too beautiful. 💗
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi2.jpeg" alt="Memory 2">
+
+            </div>
+
+            <div class="caption">
+
+                Every time I see you like this,
+                I remember how effortlessly
+                beautiful and graceful you are. 🌸
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi3.jpeg" alt="Memory 3">
+
+            </div>
+
+            <div class="caption">
+
+                Your cute expressions,
+                soft smile and tiny little details
+                make even the simplest moments feel magical. 🥹💕
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi4.jpeg" alt="Memory 4">
+
+            </div>
+
+            <div class="caption">
+
+                You have this natural beauty
+                that makes everything around you
+                feel brighter, softer and more beautiful. ✨
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi11.jpeg" alt="Memory 5">
+
+            </div>
+
+            <div class="caption">
+
+                University memories became extra special
+                because they came with your beautiful presence
+                and those cute little moments. 🎀
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi6.jpeg" alt="Memory 6">
+
+            </div>
+
+            <div class="caption">
+
+                Some pictures are just pictures,
+                but yours feel like a reminder of
+                how beautiful your smile and soul really are. 💗
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi7.jpeg" alt="Memory 7">
+
+            </div>
+
+            <div class="caption">
+
+                This moment feels so warm and cute
+                because it captures your happiness
+                in the simplest, most beautiful way. 💞
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi8.jpeg" alt="Memory 8">
+
+            </div>
+
+            <div class="caption">
+
+                Your beauty is not only in how you look,
+                but in the way you make ordinary days
+                feel cute, lovely and full of life. 🌷
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi12.jpeg" alt="Memory 9">
+
+            </div>
+
+            <div class="caption">
+
+                There are people you admire,
+                and then there are people whose presence
+                makes you feel instantly happy and calm...
+                that's you. 💗
+
+            </div>
+
+        </div>
+
+
+        <div class="memory">
+
+            <div class="memory-image">
+
+                <img src="shazi13.jpeg" alt="Memory 10">
+
+            </div>
+
+            <div class="caption">
+
+                Maybe this is only the beginning...
+                because I still want a hundred more cute memories
+                with your beautiful smile and radiant presence. 🥹💕
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <div class="funny-card">
+
+        <div class="funny-badge">
+            Serious Warning ⚠️
+        </div>
+
+        Your smile is officially a crime. 😭😂
+
+        <br>
+
+        One look at you and my brain says,
+        "Awwww" while my heart says,
+        "Nope, I’m done for." 💗
+
+        <br>
+
+        So yes, you are dangerously cute.
+        And that is not a joke. 😌✨
+
+    </div>
+
+
+    <button
+        class="next-btn"
+        onclick="nextStep(6)">
+
+        One Little Question 👀💗
+
+    </button>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 6 — LOVE QUESTION
+===================================================== -->
+
+<section id="step6">
+
+    <div class="love-card">
+
+        <div class="love-heart">
+            💗
+        </div>
+
+
+        <h2>
+            Do You Love Me?
+        </h2>
+
+
+        <p class="subtitle">
+
+            Think carefully before answering... 👀
+
+        </p>
+
+
+        <div class="love-buttons">
+
+            <button
+                class="yes-btn"
+                onclick="yesClicked()">
+
+                YES 💗
+
+            </button>
+
+
+            <button
+                class="no-btn"
+                id="noBtn"
+                onclick="noClicked()">
+
+                NO 🙈
+
+            </button>
+
+        </div>
+
+
+        <div id="noMessage"></div>
+
+    </div>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 7 — REASONS
+===================================================== -->
+
+<section id="step7">
+
+    <h2>
+        Reasons Why I Love You 💗
+    </h2>
+
+
+    <p class="subtitle">
+
+        One reason at a time...
+
+    </p>
+
+
+    <div class="reason-card">
+
+        <div
+            id="reasonText"
+            class="reason">
+        </div>
+
+    </div>
+
+
+    <button
+        id="reasonNext"
+        class="next-btn"
+        onclick="nextReason()">
+
+        Next Reason 💕
+
+    </button>
+
+</section>
+
+
+<!-- =====================================================
+     STEP 8 — FINAL SURPRISE
+===================================================== -->
+
+<section id="step8">
+
+    <div class="final-card">
+
+
+        <h1>
+            One Last Surprise 🌷
+        </h1>
+
+
+        <div class="final-age">
+
+            Happy 21st Birthday! 🎂💗
+
+        </div>
+
+
+        <p class="subtitle">
+
+            And now...
+            the last little thing
+            I wanted to say. 🥹
+
+        </p>
+
+
+        <!--
+        ==================================================
+        APNI CAT + FLOWER IMAGE YAHAN LAGAO
+
+        Image ka naam:
+        cat-flower.jpg
+
+        ==================================================
+        -->
+
+        <img
+            class="final-image"
+            src="cat.jpeg"
+            alt="Cute cat holding flower">
+
+
+        <div class="final-message">
+
+            Some people enter our lives
+            and somehow make everything
+            feel better. 🌷
+
+            <br><br>
+
+            Thank you for always being there
+            for me, for listening to me,
+            for helping me, for comforting me,
+            and for making my university life
+            so much more beautiful. 💗
+
+            <br><br>
+
+            Your little talks,
+            your concern,
+            your care,
+            your silly moments...
+
+            they all mean more
+            than you probably know. 🥹💕
+
+            <br><br>
+
+            And now that you are officially
+            <b>21</b>...
+
+            I hope this new chapter of your life
+            brings you even more happiness,
+            success, peace and beautiful memories. ✨
+
+            <br><br>
+
+            May every dream of yours come true.
+
+            May you always have reasons to smile.
+
+            May your heart always stay happy.
+
+            And may your 21st year be
+            one of the most beautiful
+            years of your life. 🌸💗
+
+        </div>
+
+
+        <div class="final-wishes">
+
+            Happy 21st Birthday,
+            Beautiful! 🎂🥳💗
+
+            <br><br>
+
+            Keep smiling always. 🌸
+
+        </div>
+
+
+        <div style="font-size:45px;margin-top:30px;">
+
+            🎂
+            🎈
+            💗
+            🌷
+            ✨
+            🥳
+            💕
+            2️⃣1️⃣
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<script>
+
+
+/* =====================================================
+   STEP NAVIGATION
+===================================================== */
+
+function nextStep(number){
+
+    document
+        .querySelectorAll("section")
+        .forEach(section=>{
+
+            section.classList.remove("active");
+
+        });
+
+
+    const next=
+        document.getElementById(
+            "step"+number
+        );
+
+
+    next.classList.add("active");
+
+
+    window.scrollTo({
+
+        top:0,
+
+        behavior:"smooth"
+
+    });
+
+
+    if(number===5){
+
+        setTimeout(
+            showMemories,
+            300
+        );
+
+    }
+
+
+    if(number===8){
+
+        bigCelebration();
+
+    }
+
+}
+
+
+/* =====================================================
+   BALLOONS
+===================================================== */
+
+let popped=0;
+
+
+const balloonMessages=[
+
+    "Cutie 💗",
+
+    "Beautiful 🌸",
+
+    "Bestie 🥹",
+
+    "Love You 💕",
+
+    "Forever Special ✨"
+
+];
+
+
+function popBalloon(balloon,index){
+
+    if(
+        balloon.classList.contains(
+            "balloon-popped"
+        )
+    )
+        return;
+
+
+    balloon.classList.add(
+        "balloon-popped"
+    );
+
+
+    popped++;
+
+
+    document.getElementById(
+        "popMessage"
+    ).innerHTML=
+        balloonMessages[index];
+
+
+    createConfetti();
+
+
+    if(popped===5){
+
+        setTimeout(()=>{
+
+            document.getElementById(
+                "popMessage"
+            ).innerHTML=
+                "You popped all of them! 🥳💗";
+
+
+            document.getElementById(
+                "balloonNext"
+            ).style.display=
+                "inline-block";
+
+        },700);
+
+    }
+
+}
+
+
+/* =====================================================
+   CONFETTI
+===================================================== */
+
+function createConfetti(){
+
+    const emojis=[
+
+        "💗",
+        "💕",
+        "💖",
+        "✨",
+        "🎉",
+        "🎈",
+        "🌸",
+        "🥳",
+        "🎀",
+        "2️⃣",
+        "1️⃣"
+
+    ];
+
+
+    for(let i=0;i<18;i++){
+
+        const c=
+            document.createElement(
+                "div"
+            );
+
+
+        c.className=
+            "confetti";
+
+
+        c.innerHTML=
+            emojis[
+                Math.floor(
+                    Math.random()
+                    *
+                    emojis.length
+                )
+            ];
+
+
+        c.style.left=
+            Math.random()*100+
+            "vw";
+
+
+        c.style.fontSize=
+            (14+
+            Math.random()*20)+
+            "px";
+
+
+        c.style.animationDuration=
+            (2.5+
+            Math.random()*2.5)+
+            "s";
+
+
+        document.body.appendChild(c);
+
+
+        setTimeout(()=>{
+
+            c.remove();
+
+        },5500);
+
+    }
+
+}
+
+
+/* =====================================================
+   TYPING MESSAGE
+===================================================== */
+
+const birthdayMessage=`
+Happy 21st Birthday! 🎂💗✨
+
+Finallyyy... 21! 🥹🎀
+
+You are one of my very best friends. 💗
+
+You always help me through the difficult times,
+
+you comfort me,
+
+and whenever I’m feeling low,
+
+you somehow always manage to make me feel better. 🥹🌸
+
+My university life has become
+
+so much more beautiful and memorable because of you. 🎀
+
+The things you say really touch my heart...
+
+and your concern?
+
+Honestly... it means so much to me. 💕
+
+Your little acts of care,
+
+your random conversations,
+
+your silly moments,
+
+and the way you are always there for me...
+
+everything about you is so special. ✨
+
+Now that you’ve turned 21,
+
+I hope this new chapter of your life
+
+becomes even more beautiful. 🌷
+
+May your 21st year be filled with
+
+happiness, success, peace,
+
+beautiful memories,
+
+and countless reasons to smile. 💗
+
+May every dream of yours come true.
+
+May you always be surrounded
+
+by people who genuinely care about you.
+
+And please...
+
+always keep smiling just like this. 🥹💕
+
+Happy 21st Birthday
+
+to someone who is genuinely
+
+very special to me. 🎂💗✨
+
+Stay happy.
+
+Stay blessed.
+
+And keep shining. 🌸
+
+`;
+
+
+let typingStarted=false;
+
+
+function startTyping(){
+
+    nextStep(4);
+
+
+    if(typingStarted)
+        return;
+
+
+    typingStarted=true;
+
+
+    const element=
+        document.getElementById(
+            "typingText"
+        );
+
+
+    let index=0;
+
+
+    function type(){
+
+        if(
+            index<
+            birthdayMessage.length
+        ){
+
+            element.innerHTML=
+                birthdayMessage.substring(
+                    0,
+                    index+1
+                )+
+                '<span class="cursor"></span>';
+
+
+            index++;
+
+
+            setTimeout(
+                type,
+                25
+            );
+
+        }
+
+        else{
+
+            element.innerHTML=
+                birthdayMessage;
+
+
+            document.getElementById(
+                "typingNext"
+            ).style.display=
+                "inline-block";
+
+
+            createConfetti();
+
+        }
+
+    }
+
+
+    type();
+
+}
+
+
+/* =====================================================
+   MEMORY ANIMATION
+===================================================== */
+
+function showMemories(){
+
+    const cards=
+        document.querySelectorAll(
+            ".memory"
+        );
+
+
+    cards.forEach(
+        (card,index)=>{
+
+            setTimeout(()=>{
+
+                card.classList.add(
+                    "show"
+                );
+
+            },index*180);
+
+        }
+    );
+
+}
+
+
+/* =====================================================
+   LOVE QUESTION
+===================================================== */
+
+let noAttempts=0;
+
+
+const noMessages=[
+
+    "Are you sure? 🥺💗",
+
+    "Think again pleaseee 🙈💕",
+
+    "NO? Really? 😭😂",
+
+    "Maybe YES is better? 👀💗",
+
+    "Okay... last chance! 🥹🌸"
+
+];
+
+
+function noClicked(){
+
+    noAttempts++;
+
+
+    const button=
+        document.getElementById(
+            "noBtn"
+        );
+
+
+    const message=
+        document.getElementById(
+            "noMessage"
+        );
+
+
+    message.innerHTML=
+        noMessages[
+            Math.min(
+                noAttempts-1,
+                4
+            )
+        ];
+
+
+    if(noAttempts<5){
+
+        const x=
+            (Math.random()*220)-110;
+
+
+        const y=
+            (Math.random()*120)-60;
+
+
+        button.style.transform=
+            `translate(${x}px,${y}px)`;
+
+    }
+
+
+    if(noAttempts===5){
+
+        message.innerHTML=
+            "Okayyy... NO has officially disappeared 😂💗";
+
+
+        button.style.display=
+            "none";
+
+    }
+
+}
+
+
+function yesClicked(){
+
+    createConfetti();
+
+
+    setTimeout(()=>{
+
+        nextStep(7);
+
+
+        reasonIndex=0;
+
+
+        showReason();
+
+    },700);
+
+}
+
+
+/* =====================================================
+   REASONS
+===================================================== */
+
+const reasons=[
+
+    "Because you always make me feel understood. 💗",
+
+    "Because you are there when I need someone the most. 🥹",
+
+    "Because your little talks can instantly make my day better. 🌸",
+
+    "Because you care about even the smallest things. 💕",
+
+    "Because you made my university life so much more memorable. 🎀",
+
+    "Because I can laugh with you over the most random things. 😂💗",
+
+    "Because your presence feels comforting. 🌷",
+
+    "Because you genuinely care about me. 🥹",
+
+    "Because you are one of those people I never want to lose. 💞",
+
+    "And simply because... you're YOU. 💗✨"
+
+];
+
+
+let reasonIndex=0;
+
+
+function showReason(){
+
+    const box=
+        document.getElementById(
+            "reasonText"
+        );
+
+
+    box.classList.remove(
+        "reason"
+    );
+
+
+    void box.offsetWidth;
+
+
+    box.classList.add(
+        "reason"
+    );
+
+
+    box.innerHTML=
+        reasons[reasonIndex];
+
+}
+
+
+function nextReason(){
+
+    reasonIndex++;
+
+
+    if(
+        reasonIndex<
+        reasons.length
+    ){
+
+        showReason();
+
+    }
+
+    else{
+
+        nextStep(8);
+
+    }
+
+}
+
+
+/* =====================================================
+   FINAL CELEBRATION
+===================================================== */
+
+function bigCelebration(){
+
+    setTimeout(()=>{
+
+        for(
+            let i=0;
+            i<5;
+            i++
+        ){
+
+            setTimeout(()=>{
+
+                createConfetti();
+
+            },i*500);
+
+        }
+
+    },500);
+
+}
+
+
+/* =====================================================
+   CLICK HEART EFFECT
+===================================================== */
+
+document.addEventListener(
+    "click",
+    (event)=>{
+
+        const heart=
+            document.createElement(
+                "div"
+            );
+
+
+        heart.innerHTML="💗";
+
+
+        heart.style.position=
+            "fixed";
+
+
+        heart.style.left=
+            event.clientX+"px";
+
+
+        heart.style.top=
+            event.clientY+"px";
+
+
+        heart.style.fontSize=
+            "22px";
+
+
+        heart.style.pointerEvents=
+            "none";
+
+
+        heart.style.zIndex=
+            "10000";
+
+
+        heart.style.transition=
+            "1s ease";
+
+
+        document.body.appendChild(
+            heart
+        );
+
+
+        setTimeout(()=>{
+
+            heart.style.transform=
+                "translateY(-80px) scale(1.6)";
+
+
+            heart.style.opacity=
+                "0";
+
+        },20);
+
+
+        setTimeout(()=>{
+
+            heart.remove();
+
+        },1000);
+
+    }
+);
+
+</script>
+
+</body>
+</html>
